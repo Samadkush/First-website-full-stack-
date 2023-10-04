@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <header class="dashboard-header">
+        <form action="dashboard.php" method="post"></form>
+        <img src="logo (1).png" alt="Your Logo" style="width: 300px; height: 100px; margin-right: 6600px; ">
+
+        <nav>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <!-- Change the link to "applications.html" -->
+                <li><a href="applications.html#applications">Applications</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <div class="status-container">
+                <div class="status">
+                    <h3>New Request</h3>
+                    <span class="count">10</span>
+                </div>
+                <div class="status">
+                    <h3>Approved</h3>
+                    <span class="count">20</span>
+                </div>
+                <div class="status">
+                    <h3>Awaiting Revision</h3>
+                    <span class="count">5</span>
+                </div>
+            </div>
+
+        
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

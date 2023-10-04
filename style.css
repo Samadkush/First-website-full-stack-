@@ -1,0 +1,223 @@
+/* Apply general styling to the form */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color:black;
+}
+
+form {
+  margin-top: 20px;
+}
+
+/* Apply style to the logo */
+.logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Apply style to form groups (labels and inputs) */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Apply red border to text inputs and textareas */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+textarea {
+  border: 1px solid red;
+  padding: 5px;
+  width: 100%;
+}
+
+/* Apply red border to radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  border: 1px solid red;
+  margin-right: 5px;
+}
+
+/* Apply red border to select dropdown */
+select {
+  border: 1px solid red;
+  padding: 5px;
+}
+
+/* Apply red border to the "Other" text input fields */
+#otherSpecify,
+#participantTypeOtherText,
+#methodOtherText {
+  display: block;
+  border: 1px solid red;
+  padding: 5px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Apply red border to the "Signature" text input fields */
+input[type="signature"] {
+  border: 1px solid red;
+  padding: 5px;
+  width: 100%;
+}
+
+/* Style the button */
+button[type="submit"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: darkred;
+}
+ /* Style the Back Button */
+ .back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: #b42323;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #8d8181;
+}
+#question11To21 {
+  display: block !important; /* Test style to force visibility */
+}
+/* Apply general styling to the form */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid black;
+  background-color: #fff; /* Add a white background */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: black;
+  font-size: 24px; /* Increase font size for the heading */
+}
+
+form {
+  margin-top: 20px;
+}
+
+/* Apply style to the logo */
+.logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Apply style to form groups (labels and inputs) */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Apply red border to text inputs and textareas */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+textarea {
+  border: 1px solid red;
+  padding: 10px; /* Increase padding for better readability */
+  width: 100%;
+  font-size: 16px; /* Set a consistent font size */
+}
+
+/* Apply red border to radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  border: 1px solid red;
+  margin-right: 5px;
+}
+
+/* Apply red border to select dropdown */
+select {
+  border: 1px solid red;
+  padding: 10px; /* Increase padding for better readability */
+  width: 100%;
+  font-size: 16px; /* Set a consistent font size */
+}
+
+/* Apply red border to the "Other" text input fields */
+#otherSpecify,
+#participantTypeOtherText,
+#methodOtherText {
+  display: block;
+  border: 1px solid red;
+  padding: 10px; /* Increase padding for better readability */
+  width: 100%;
+  margin-top: 5px;
+  font-size: 16px; /* Set a consistent font size */
+}
+
+/* Apply red border to the "Signature" text input fields */
+input[type="signature"] {
+  border: 1px solid red;
+  padding: 10px; /* Increase padding for better readability */
+  width: 100%;
+  font-size: 16px; /* Set a consistent font size */
+}
+
+/* Style the button */
+button[type="submit"] {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px; /* Increase padding for better appearance */
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: darkred;
+}
+
+/* Style the Back Button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: #b42323;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* Set a consistent font size */
+}
+
+.back-button:hover {
+  background-color: #8d8181;
+}

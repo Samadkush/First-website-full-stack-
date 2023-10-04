@@ -1,0 +1,283 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /*overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+
+/* Header styles */
+header {
+  background-color: #b42323;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  max-width: 100%;
+  font-size: 24px;
+  position: relative;
+}
+
+header.black-text {
+  color: #000; /* Change this color to black for "User Dashboard" */
+}
+
+/* Dashboard title styles */
+.dashboard-title {
+  color: #000; /* Set the color to black */
+  font-size: 24px;
+  margin-bottom: 10px; /* Add some spacing between "User Dashboard" and navigation links */
+}
+
+/* Navigation styles */
+nav {
+  height: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+  background-color: #b42323;
+  color: #fff;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+nav.fixed-width {
+  width: 100%;
+}
+
+/* Navigation list styles */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center the list items horizontally */
+}
+
+.nav-list li {
+  margin-left: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.nav-list li a:hover {
+  background-color: #8d8181f1;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Section headings styles */
+h2 {
+  border-bottom: 2px solid #e73232;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Status container styles */
+.status-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Status styles */
+.status {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.count {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4285f4;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Delete button styles */
+.delete-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Form container styles */
+.form-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.form-container h2 {
+  margin-top: 0;
+}
+
+/* Read more button styles */
+.read-more-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #45a049;
+}
+
+/* Description styles */
+.description {
+  display: none;
+}
+
+.description.active {
+  display: block;
+}
+
+/* Accordion button styles */
+.accordion-btn {
+  background-color: #f5f5f5;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-btn:hover {
+  background-color: #ddd;
+}
+
+/* Accordion container styles */
+.accordion-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Accordion styles */
+.accordion {
+  width: 600px;
+}
+
+/* Homepage styles */
+.Homepage {
+  justify-content: center;
+  margin-top: 100px; /* Adjust margin to push content below header */
+}
+
+/* Project Form styles */
+#Projectform {
+  display: block;
+}
+
+/* Application page styles */
+.applications-container {
+  padding: 20px;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Application list styles */
+.application-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Application item styles */
+.application-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+}
+
+/* View button styles */
+.view-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Application details container styles */
+.application-details-container {
+  display: none;
+  padding: 20px;
+}
+
+/* Application details styles */
+.application-details {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form group label styles */
+.form-group label {
+  font-weight: bold;
+}
+
+/* Close button styles */
+.close-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 20px;
+}

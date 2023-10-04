@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('final.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e02b2b;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #565656;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    color: white;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #333;
+  }
+  
+  button[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #cd2c2c;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+   
+  :root {
+    --background-color: #e73838;
+    --text-color: white;
+    --input-background-color: #333;
+    --button-background-color: #ff2525;
+    --button-hover-background-color: #ef5656;
+  }
+
+  /* Use variables to set background colors */
+  body {
+    background-color: var(--background-color);
+  }
+
+  /* Use variables to set text color */
+  .container, h1, label, input, button, p {
+    color: var(--text-color);
+  }
+
+  /* Use variables to set input background color */
+  input {
+    background-color: var(--input-background-color);
+  }
+
+  /* Use variables to set button background color */
+  button[type="submit"] {
+    background-color: var(--button-background-color);
+  }
+
+  /* Use variables to set button hover background color */
+  button[type="submit"]:hover {
+    background-color: var(--button-hover-background-color);
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }

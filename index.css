@@ -1,0 +1,183 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #b42323;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  
+  h1 {
+    margin: left;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #8d8181f1;
+  }
+  
+  nav ul li a.active {
+    background-color: #d83c3c;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h2 {
+    border-bottom: 2px solid #e73232;
+    padding-bottom: 10px;
+    margin-top: 0;
+  }
+  
+  .status-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .status {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .count {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4285f4;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  .pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page-btn {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.page-btn:hover {
+    background-color: #ddd;
+}
+
+.page-btn.active {
+    background-color: #b42323;
+    color: #fff;
+}
+
+.pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 10px; /* Smaller border radius for a rounded look */
+  padding: 5px;
+  border: 1px solid #ccc;
+  position: relative;
+  height: 10px; /* Adjust the height of the container */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow for a 3D appearance */
+}
+
+.pagination-button {
+  display: inline-block;
+  width: 18px; /* Adjust width to accommodate the SVG icon */
+  height: 18px; /* Adjust height to accommodate the SVG icon */
+  background-color: #f4f4f4;
+  color: #333;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  overflow: hidden; /* Hide overflow to ensure SVG icon fits */
+}
+
+.pagination-back svg {
+  transform: rotate(360deg); /* Rotate the back arrow */
+}
+
+.pagination-forward svg {
+  transform: rotate(0deg); /* No need to rotate the forward arrow */
+}
+
+@media (min-width: 768px) {
+  /* Styles for tablets and larger screens */
+  nav ul {
+    justify-content: flex-end;
+    margin-right: 30px; /* Add some margin on the right to separate from the logo */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Styles for desktop screens */
+  nav ul li {
+    margin-left: 30px;
+  }
+}
+
+
