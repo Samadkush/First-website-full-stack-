@@ -171,7 +171,7 @@ select {
 #otherSpecify,
 #participantTypeOtherText,
 #methodOtherText {
-  display: block;
+  /* display: block; */
   border: 1px solid red;
   padding: 10px; /* Increase padding for better readability */
   width: 100%;

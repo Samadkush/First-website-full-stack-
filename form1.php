@@ -7,7 +7,6 @@
   <img src= "logo.jpg" alt="Final International University" class="logo">
   <title>FINAL INTERNATIONAL UNIVERSITY ETHICS COMMITTEE APPLICATION FORM</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script> 
 </head>
 
 <body>
@@ -421,6 +420,7 @@
       <button type="submit">Submit</button>
     </form>
   </div>
+  <script src="form1.js"></script> 
 </body>
 
 </html>

@@ -6,167 +6,85 @@ document.addEventListener('DOMContentLoaded', function () {
   const researchersContainer = document.querySelector('.researchers-container');
   const advisorSection = document.getElementById('advisorSection');
   const typeOfStudyOptions = document.getElementsByName('typeOfStudy');
-    
-  
-    // Function to check if the form is valid before submission
-    function validateForm(event) {
-      const titleInput = document.getElementById('title');
-      const researcherNameInput = document.getElementById('researcherName');
-      const emailInput = document.getElementById('email');
-
-      if (otherRadio.checked && otherSpecifyInput.value.trim() === '') {
-        alert('Please specify the type of study.');
-        event.preventDefault();
-        return false;
-      }
-      if (titleInput.value.trim() === '') {
-        alert('Please enter the title of the study.');
-        event.preventDefault();
-        return false;
-      }
-  
-      if (researcherNameInput.value.trim() === '') {
-        alert('Please enter your name and surname.');
-        event.preventDefault();
-        return false;
-      }
-  
-      if (otherRadio.checked && otherSpecifyInput.value.trim() === '') {
-        alert('Please specify the type of study.');
-        event.preventDefault();
-        return false;
-      }
-  
-      if (emailInput.value.trim() === '') {
-        alert('Please enter your email address.');
-        event.preventDefault();
-        return false;
-      }
-  
-      // Add more validations for other required fields if necessary
-  
-      // Form validation successful, show confirmation message
-      alert('Ethics Committee Application Form submitted successfully!');
-      return true;
-    }
-  
-    // Add form validation on form submission
-    ethicsForm.addEventListener('submit', validateForm);
-    
-  
-    otherRadio.addEventListener('change', function () {
-      if (otherRadio.checked) {
-        otherSpecifyInput.style.display = 'block';
-      } else {
-        otherSpecifyInput.style.display = 'none';
-      }
-    });
-  });
-  document.addEventListener('DOMContentLoaded', function () {
-    const numResearchersSelect = document.getElementById('numResearchers');
-    const researchersContainer = document.querySelector('.researchers-container');
-  
-    numResearchersSelect.addEventListener('change', function () {
-      const numResearchers = parseInt(numResearchersSelect.value, 10);
-      researchersContainer.innerHTML = ''; // Clear previous inputs
-  
-      for (let i = 1; i <= numResearchers; i++) {
-        const researcherDiv = document.createElement('div');
-        researcherDiv.classList.add('form-group');
-  
-        const nameLabel = document.createElement('label');
-        nameLabel.textContent = `Researcher ${i} Name and Surname:`;
-        const nameInput = document.createElement('input');
-        nameInput.type = 'text';
-        nameInput.name = `researcherName${i}`;
-        nameInput.placeholder = 'Enter name and surname';
-        nameInput.required = true;
-  
-        const institutionLabel = document.createElement('label');
-        institutionLabel.textContent = 'Institution:';
-        const institutionInput = document.createElement('input');
-        institutionInput.type = 'text';
-        institutionInput.name = `researcherInstitution${i}`;
-        institutionInput.placeholder = 'Enter institution';
-        institutionInput.required = true;
-  
-        const nameInstitutionDiv = document.createElement('div');
-        nameInstitutionDiv.classList.add('name-input');
-        nameInstitutionDiv.appendChild(nameInput);
-        nameInstitutionDiv.appendChild(institutionLabel);
-        nameInstitutionDiv.appendChild(institutionInput);
-  
-        researcherDiv.appendChild(nameLabel);
-        researcherDiv.appendChild(nameInstitutionDiv);
-  
-        researchersContainer.appendChild(researcherDiv);
-      }
-    });
-  });
-  
-  document.addEventListener('DOMContentLoaded', function () {
-    const advisorSection = document.getElementById('advisorSection');
-    const advisorInfoElements = document.getElementsByClassName('advisor-info');
-    const typeOfStudyOptions = document.getElementsByName('typeOfStudy');
-  
-    function updateAdvisorSectionVisibility() {
-      let showAdvisor = false;
-  
-      for (const option of typeOfStudyOptions) {
-        if (option.checked && (option.value === 'masterThesis' || option.value === 'undergraduate')) {
-          showAdvisor = true;
-          break;
-        }
-      }
-  
-      if (showAdvisor) {
-        advisorSection.style.display = 'block';
-        for (const element of advisorInfoElements) {
-          element.style.display = 'block';
-        }
-      } else {
-        advisorSection.style.display = 'none';
-        for (const element of advisorInfoElements) {
-          element.style.display = 'none';
-        }
-      }
-    }
-  
-    updateAdvisorSectionVisibility();
-  
-    for (const option of typeOfStudyOptions) {
-      option.addEventListener('change', updateAdvisorSectionVisibility);
-    }
-  });
-  
-  
- // JavaScript code to toggle visibility of the textarea based on radio button selection
-document.addEventListener('DOMContentLoaded', function () {
   const externalOrganizationYes = document.getElementById('externalOrganizationYes');
   const externalOrganizationDetails = document.getElementById('externalOrganizationDetails');
-
-  // Function to update visibility of textarea
-  function updateTextareaVisibility() {
-    externalOrganizationDetails.style.display = externalOrganizationYes.checked ? 'block' : 'none';
-  }
-
-  // Initial setup
-  updateTextareaVisibility();
-
-  // Add event listener to update visibility when the radio buttons are clicked
-  externalOrganizationYes.addEventListener('change', updateTextareaVisibility);
-  document.getElementById('externalOrganizationNo').addEventListener('change', updateTextareaVisibility);
-});
-// JavaScript code to handle visibility based on radio button selections
-document.addEventListener('DOMContentLoaded', function () {
   const supportedYes = document.getElementById('supportedYes');
   const fundingOrganizationSection = document.getElementById('fundingOrganizationSection');
   const universityTextBox = document.getElementById('universityTextBox');
   const tubitakTextBox = document.getElementById('tubitakTextBox');
   const internationalTextBox = document.getElementById('internationalTextBox');
   const otherTextBox = document.getElementById('otherTextBox');
+  const applicationStatusOptions = document.getElementsByName('applicationStatus');
+  const reportingChangesSection = document.getElementById('reportingChangesSection');
+  const extensionSection = document.getElementById('extensionSection');
+  const question11To21 = document.getElementById('question11To21');
+  const participantTypeOtherCheckbox = document.getElementById('participantTypeOther');
+  const participantTypeOtherText = document.getElementById('participantTypeOtherText');
+  const methodOtherCheckbox = document.getElementById('methodOther');
+  const methodOtherText = document.getElementById('methodOtherText');
+  const studyChangesYes = document.getElementById("studyChangesYes");
+  const studyChangesSection = document.getElementById("studyChangesSection");
+  const controlGroupYes = document.getElementById("controlGroupYes");
+  const question17To21 = document.getElementById("question17To21");
 
-  // Function to toggle visibility of the funding organization text boxes
+  function validateForm(event) {
+    const titleInput = document.getElementById('title');
+    const researcherNameInput = document.getElementById('researcherName');
+    const emailInput = document.getElementById('email');
+
+    if (otherRadio.checked && otherSpecifyInput.value.trim() === '') {
+      alert('Please specify the type of study.');
+      event.preventDefault();
+      return false;
+    }
+
+    if (titleInput.value.trim() === '') {
+      alert('Please enter the title of the study.');
+      event.preventDefault();
+      return false;
+    }
+
+    if (researcherNameInput.value.trim() === '') {
+      alert('Please enter your name and surname.');
+      event.preventDefault();
+      return false;
+    }
+
+    if (otherRadio.checked && otherSpecifyInput.value.trim() === '') {
+      alert('Please specify the type of study.');
+      event.preventDefault();
+      return false;
+    }
+
+    if (emailInput.value.trim() === '') {
+      alert('Please enter your email address.');
+      event.preventDefault();
+      return false;
+    }
+
+    // Add more validations for other required fields if necessary
+
+    alert('Ethics Committee Application Form submitted successfully!');
+    return true;
+  }
+
+  function updateAdvisorSectionVisibility() {
+    let showAdvisor = false;
+
+    for (const option of typeOfStudyOptions) {
+      if (option.checked && (option.value === 'masterThesis' || option.value === 'undergraduate')) {
+        showAdvisor = true;
+        break;
+      }
+    }
+
+    advisorSection.style.display = showAdvisor ? 'block' : 'none';
+  }
+
+  function updateTextareaVisibility() {
+    externalOrganizationDetails.style.display = externalOrganizationYes.checked ? 'block' : 'none';
+  }
+
   function updateFundingOrganizationVisibility() {
     const fundingOrganizationRadios = document.getElementsByName('supportingInstitution');
     const selectedSupported = supportedYes.checked;
@@ -178,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
       for (const radio of fundingOrganizationRadios) {
         radio.checked = false;
       }
-      // Clear all the text boxes when funding organization section is hidden
       document.getElementById('universityInstitution').value = '';
       document.getElementById('tubitakInstitution').value = '';
       document.getElementById('internationalInstitution').value = '';
@@ -186,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Function to toggle visibility of the 'International' or 'Other' text box
   function updateInstitutionTextBoxVisibility() {
     const internationalRadio = document.getElementById('International');
     const otherRadio = document.getElementById('Other');
@@ -203,149 +119,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Initial setup
-  updateFundingOrganizationVisibility();
-  updateInstitutionTextBoxVisibility();
-
-  // Add event listeners to update visibility when the radio buttons are clicked
-  supportedYes.addEventListener('change', updateFundingOrganizationVisibility);
-  document.getElementById('supportedNo').addEventListener('change', updateFundingOrganizationVisibility);
-
-  // Add event listeners to update visibility for the 'International' and 'Other' text boxes
-  document.getElementById('International').addEventListener('change', updateInstitutionTextBoxVisibility);
-  document.getElementById('Other').addEventListener('change', updateInstitutionTextBoxVisibility);
-
-  // Add event listeners to update visibility when the funding organization radio buttons are clicked
-  const fundingOrganizationRadios = document.getElementsByName('supportingInstitution');
-  for (const radio of fundingOrganizationRadios) {
-    radio.addEventListener('change', function () {
-      universityTextBox.style.display = radio.value === 'University' ? 'block' : 'none';
-      tubitakTextBox.style.display = radio.value === 'TUBITAK' ? 'block' : 'none';
-      updateInstitutionTextBoxVisibility(); // Call the function to handle 'International' and 'Other' text boxes
-    });
+  function handleReportingChangesVisibility() {
+    reportingChangesSection.style.display = reportingChangesRadio.checked ? "block" : "none";
   }
-});
-
-function handleReportingChangesVisibility() {
-  const reportingChangesRadio = document.getElementById("applicationStatusChanges");
-  const reportingChangesSection = document.getElementById("reportingChangesSection");
-
-  if (reportingChangesRadio.checked) {
-    reportingChangesSection.style.display = "block";
-  } else {
-    reportingChangesSection.style.display = "none";
-  }
-}
-
-// Attach the function to the change event of the radio button
-document.addEventListener("DOMContentLoaded", function() {
-  const reportingChangesRadio = document.getElementById("applicationStatusChanges");
-  reportingChangesRadio.addEventListener("change", handleReportingChangesVisibility);
-
-  // Call the function on page load to handle initial visibility
-  handleReportingChangesVisibility();
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const otherSpecifyInput = document.getElementById('otherSpecify');
-  const typeOfStudyOptions = document.getElementsByName('typeOfStudy');
 
   function updateOtherSpecifyVisibility() {
-    const otherRadioButton = document.getElementById('other');
-    if (otherRadioButton.checked) {
-      otherSpecifyInput.style.display = 'block';
-    } else {
-      otherSpecifyInput.style.display = 'none';
-    }
+    otherSpecifyInput.style.display = otherRadio.checked ? 'block' : 'none';
   }
-
+  function toggleQuestions11To21() {
+    const showQuestions11To21 = applicationStatusNew.checked || applicationStatusRevised.checked;
+    questions11To21Section.style.display = showQuestions11To21 ? 'block' : 'none';
+  }
+  
   // Initial setup
-  updateOtherSpecifyVisibility();
-
-  // Event listeners to update visibility when any radio button in the group is clicked
-  for (const option of typeOfStudyOptions) {
-    option.addEventListener('change', updateOtherSpecifyVisibility);
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const reportingChangesSection = document.getElementById('reportingChangesSection');
-  const applicationStatusOptions = document.getElementsByName('applicationStatus');
-
-  function updateReportingChangesVisibility() {
-    const reportingChangesRadioButton = document.getElementById('applicationStatusChanges');
-    if (reportingChangesRadioButton.checked) {
-      reportingChangesSection.style.display = 'block';
-    } else {
-      reportingChangesSection.style.display = 'none';
-    }
-  }
-
-  // Initial setup
-  updateReportingChangesVisibility();
-
-  // Event listeners to update visibility when any radio button in the group is clicked
-  for (const option of applicationStatusOptions) {
-    option.addEventListener('change', updateReportingChangesVisibility);
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const questions11To21Section = document.querySelector('.questions-11-to-21');
-  const applicationStatusNew = document.getElementById('applicationStatusNew');
-  const applicationStatusRevised = document.getElementById('applicationStatusRevised');
-  const applicationStatusExtension = document.getElementById('applicationStatusExtension');
-  const applicationStatusChanges = document.getElementById('applicationStatusChanges');
-  const reportingChangesSection = document.querySelector('.reporting-changes-section');
-  const extensionSection = document.querySelector('.extension-section');
-
-  // Helper function to toggle visibility based on radio button values
-  function toggleVisibility() {
-    const showQuestions11To21 =
-      applicationStatusNew.checked || applicationStatusRevised.checked;
-    question11To21Section.style.display = showQuestions11To21 ? 'block' : 'none';
-    
-    // Hide the other sections
-    const applicationStatusChangesSection = document.querySelector('.application-status-changes-section');
-    const applicationStatusExtensionSection = document.querySelector('.application-status-extension-section');
-    applicationStatusChangesSection.style.display = 'none';
-    applicationStatusExtensionSection.style.display = 'none';
-
-    // Show additional sections if the corresponding radio buttons are checked
-    if (applicationStatusChanges.checked) {
-      reportingChangesSection.style.display = 'block';
-    } else {
-      reportingChangesSection.style.display = 'none';
-    }
-
-    if (applicationStatusExtension.checked) {
-      extensionSection.style.display = 'block';
-    } else {
-      extensionSection.style.display = 'none';
-    }
-  }
-
-  // Initial setup
-  toggleVisibility();
-
+  toggleQuestions11To21();
+  
   // Event listeners to update visibility when the "Status of the application" radio buttons are clicked
-  applicationStatusNew.addEventListener('change', toggleVisibility);
-  applicationStatusRevised.addEventListener('change', toggleVisibility);
-  applicationStatusExtension.addEventListener('change', toggleVisibility);
-  applicationStatusChanges.addEventListener('change', toggleVisibility);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const applicationStatusOptions = document.getElementsByName('applicationStatus');
-  const reportingChangesSection = document.querySelector('#reportingChangesSection');
-  const extensionSection = document.querySelector('#extensionSection');
-  const question11To21 = document.querySelector('#question11To21');
-
-  const participantTypeOtherCheckbox = document.getElementById('participantTypeOther');
-  const participantTypeOtherText = document.getElementById('participantTypeOtherText');
-
-  const methodOtherCheckbox = document.getElementById('methodOther');
-  const methodOtherText = document.getElementById('methodOtherText');
+  applicationStatusNew.addEventListener('change', toggleQuestions11To21);
+  applicationStatusRevised.addEventListener('change', toggleQuestions11To21);
 
   function updateVisibility() {
     const selectedStatus = document.querySelector('input[name="applicationStatus"]:checked');
@@ -353,91 +144,108 @@ document.addEventListener('DOMContentLoaded', function () {
     if (selectedStatus) {
       const statusValue = selectedStatus.value;
 
-      // Handle Question 11 to 21 visibility
-      const question11To21Visible = statusValue === 'new' || statusValue === 'revised';
-      question11To21.style.display = question11To21Visible ? 'block' : 'none';
+      question11To21.style.display = statusValue === 'new' || statusValue === 'revised' ? 'block' : 'none';
 
-      // Handle "Reporting changes" section visibility
       reportingChangesSection.style.display = statusValue === 'changes' ? 'block' : 'none';
 
-      // Handle "Extension" section visibility
       extensionSection.style.display = statusValue === 'extension' ? 'block' : 'none';
     }
   }
 
-  // Handle Other checkbox for question 17
-  participantTypeOtherCheckbox.addEventListener('change', function () {
-    participantTypeOtherText.style.display = this.checked ? 'block' : 'none';
-  });
-
-  // Handle Other checkbox for question 20
-  methodOtherCheckbox.addEventListener('change', function () {
-    methodOtherText.style.display = this.checked ? 'block' : 'none';
-  });
-
-  // Initial setup
-  updateVisibility();
-
-  // Event listeners to update visibility
-  for (const statusOption of applicationStatusOptions) {
-    statusOption.addEventListener('change', updateVisibility);
-  }
   function toggleStudyChangesSection() {
-    const studyChangesYes = document.getElementById("studyChangesYes");
-    const studyChangesSection = document.getElementById("studyChangesSection");
-
     studyChangesSection.style.display = studyChangesYes.checked ? "block" : "none";
   }
 
-  // Add event listeners to the studyChanges radio buttons
-  const studyChangesYes = document.getElementById("studyChangesYes");
-  const studyChangesNo = document.getElementById("studyChangesNo");
+  function toggleQuestion17To21() {
+    question17To21.style.display = controlGroupYes.checked ? "block" : "none";
+  }
+
+  function toggleDescription(formId) {
+    const descriptionElement = document.getElementById(`${formId}-description`);
+    descriptionElement.style.display = descriptionElement.style.display === 'none' ? 'block' : 'none';
+  }
+
+  ethicsForm.addEventListener('submit', validateForm);
+
+  otherRadio.addEventListener('change', function () {
+    otherSpecifyInput.style.display = otherRadio.checked ? 'block' : 'none';
+  });
+
+  numResearchersSelect.addEventListener('change', function () {
+    const numResearchers = parseInt(numResearchersSelect.value, 10);
+    researchersContainer.innerHTML = '';
+
+    for (let i = 1; i <= numResearchers; i++) {
+      const researcherDiv = document.createElement('div');
+      researcherDiv.classList.add('form-group');
+
+      const nameLabel = document.createElement('label');
+      nameLabel.textContent = `Researcher ${i} Name and Surname:`;
+      const nameInput = document.createElement('input');
+      nameInput.type = 'text';
+      nameInput.name = `researcherName${i}`;
+      nameInput.placeholder = 'Enter name and surname';
+      nameInput.required = true;
+
+      const institutionLabel = document.createElement('label');
+      institutionLabel.textContent = 'Institution:';
+      const institutionInput = document.createElement('input');
+      institutionInput.type = 'text';
+      institutionInput.name = `researcherInstitution${i}`;
+      institutionInput.placeholder = 'Enter institution';
+      institutionInput.required = true;
+
+      const nameInstitutionDiv = document.createElement('div');
+      nameInstitutionDiv.classList.add('name-input');
+      nameInstitutionDiv.appendChild(nameInput);
+      nameInstitutionDiv.appendChild(institutionLabel);
+      nameInstitutionDiv.appendChild(institutionInput);
+
+      researcherDiv.appendChild(nameLabel);
+      researcherDiv.appendChild(nameInstitutionDiv);
+
+      researchersContainer.appendChild(researcherDiv);
+    }
+  });
+
+  updateAdvisorSectionVisibility();
+
+  for (const option of typeOfStudyOptions) {
+    option.addEventListener('change', updateAdvisorSectionVisibility);
+  }
+
+  updateTextareaVisibility();
+
+  externalOrganizationYes.addEventListener('change', updateTextareaVisibility);
+  document.getElementById('externalOrganizationNo').addEventListener('change', updateTextareaVisibility);
+
+  supportedYes.addEventListener('change', updateFundingOrganizationVisibility);
+  document.getElementById('supportedNo').addEventListener('change', updateFundingOrganizationVisibility);
+
+  document.getElementById('International').addEventListener('change', updateInstitutionTextBoxVisibility);
+  document.getElementById('Other').addEventListener('change', updateInstitutionTextBoxVisibility);
+
+  const fundingOrganizationRadios = document.getElementsByName('supportingInstitution');
+  for (const radio of fundingOrganizationRadios) {
+    radio.addEventListener('change', function () {
+      universityTextBox.style.display = radio.value === 'University' ? 'block' : 'none';
+      tubitakTextBox.style.display = radio.value === 'TUBITAK' ? 'block' : 'none';
+      updateInstitutionTextBoxVisibility();
+    });
+  }
+
+  reportingChangesRadio.addEventListener("change", handleReportingChangesVisibility);
+
+  for (const option of applicationStatusOptions) {
+    option.addEventListener('change', updateVisibility);
+  }
 
   studyChangesYes.addEventListener("change", toggleStudyChangesSection);
   studyChangesNo.addEventListener("change", toggleStudyChangesSection);
 
-  // Trigger the toggleStudyChangesSection function initially
-  toggleStudyChangesSection();
-
-  function toggleQuestion17To21() {
-    const controlGroupYes = document.getElementById("controlGroupYes");
-    const question17To21 = document.getElementById("question17To21");
-
-    question17To21.style.display = controlGroupYes.checked ? "block" : "none";
-  }
-
-  // Add event listeners to the controlGroup radio buttons
-  const controlGroupYes = document.getElementById("controlGroupYes");
-  const controlGroupNo = document.getElementById("controlGroupNo");
-
   controlGroupYes.addEventListener("change", toggleQuestion17To21);
   controlGroupNo.addEventListener("change", toggleQuestion17To21);
 
-  // Trigger the toggleQuestion17To21 function initially
-  toggleQuestion17To21();
-});
-
-function toggleDescription(formId) {
-  const descriptionElement = document.getElementById(`${formId}-description`);
-  descriptionElement.classList.toggle('active');
-}
-
-
-function toggleDescription(formId) {
-  const descriptionElement = document.getElementById(`${formId}-description`);
-  const button = document.querySelector(`button[onclick="toggleDescription('${formId}')"]`);
-
-  if (descriptionElement.style.display === "none") {
-    descriptionElement.style.display = "block";
-    button.textContent = "Read Less";
-  } else {
-    descriptionElement.style.display = "none";
-    button.textContent = "Read More";
-  }
-}
-
-// Function to show the selected section when a link is clicked
-document.addEventListener("DOMContentLoaded", function() {
   const navLinks = document.querySelectorAll("nav a");
 
   navLinks.forEach(link => {
@@ -446,15 +254,12 @@ document.addEventListener("DOMContentLoaded", function() {
       const targetSectionId = this.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetSectionId);
 
-      // Hide all sections
       const allSections = document.querySelectorAll(".section");
       allSections.forEach(section => {
         section.style.display = "none";
       });
 
-      // Display the selected section
       targetSection.style.display = "block";
     });
   });
 });
-

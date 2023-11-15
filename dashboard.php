@@ -69,36 +69,6 @@ if ($formId !== null) {
     $formDetails = getAllFormDetails($conn, $formId);
 
 
-//$formDetails = getAllFormDetails($conn, $formId);
- //foreach ($allFormDetails as $formDetails) {
- // echo  $formDetails['type'];
-// }
-  
-
-//if (isset($_GET['form_id'])) 
-//{
-  //$formId = $_GET['form_id'];
-  //$formType=$_GET['type'];
-
-
-//if ($formType === 'Project Application') {
-    // Include the edit_form1.php logic here
-   // echo "Including Project Form Logic"; // Debug output
-    //include 'edit_form.php';
-//} elseif ($formType === 'Ethics Forms') {
-    // Include the edit_form2.php logic here
-    //echo "Including Ethics Committee Form Logic"; // Debug output
-   // include 'edit_form2.php';
-//} else {
-    //echo "Unknown form type.";
-    //echo "Form Type: $formType"; 
-    //exit();
-  
-//}
-//}else{
-  //echo "No form id provided.";
-  //exit();
-//}
 function deleteApplication($conn, $form_id) {
   $stmt = $conn->prepare("DELETE FROM projectApplications WHERE form_id = ?");
   $stmt->bind_param("s", $form_id);
@@ -142,7 +112,7 @@ if (isset($_GET["delete"]) && $_GET["delete"] === "true" && isset($_GET["form_id
     <div id="navbar">
         <nav>
         <ul class="nav-list">
-                <li><a href="#home-section">Home</a></li>
+                <li><a href="#home-section">Home</a></li> 
                 <li><a href="#Application-status">Applications Status</a></li>
                 <li><a href="form1.php">Ethics Committee Application Form</a></li>
                 <li><a href="form2.php">Project Information Form</a></li>
@@ -171,7 +141,7 @@ if (isset($_GET["delete"]) && $_GET["delete"] === "true" && isset($_GET["form_id
     </section>
       
 
-    <script src="dashboard.js"></script>
+    
 
     <section id="Application-status" class="section">
     <div class="applications-list">
@@ -234,11 +204,7 @@ if (isset($_GET["delete"]) && $_GET["delete"] === "true" && isset($_GET["form_id
         background-color: #45a049;
     }
 </style>
-<div id=form-content-container>
-<div id="form1-container"></div>
-<div id="form2-container"></div>
-</div>
 
-
+<script src="dashboard.js"></script>
     </body>
     </html> 
